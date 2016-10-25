@@ -67,6 +67,11 @@ rbtrace -p PID -e 'Thread.new{require "objspace"; ObjectSpace.trace_object_alloc
 system("rbtrace -p #{Process.pid} -e 'load \"#{Rails.root}/script/heap_dump.rb\"'").  
 ```
 
+GC.stat
+```shell
+bundle exec rbtrace -p PID -e 'GC.stat'
+```
+
 From Dump to Data
 ---
 ```shell
