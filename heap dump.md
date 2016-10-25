@@ -5,6 +5,28 @@ Links
 - [heapy](https://github.com/schneems/heapy)
 - [Ruby 2.1: objspace.so](http://tmm1.net/ruby21-objspace/)
 
+
+objspace.so
+---
+```ruby
+require 'objspace'
+
+# enable tracing for file/line/generation data in dumps
+ObjectSpace.trace_object_allocations_start
+
+ObjectSpace.dump_all(output: File.open('heap.json','w'))
+```
+
+a simple ruby/shell script to see which gems/libraries create the most long-lived objects of different types:
+```shell
+cat heap.json |
+    ruby -rjson -ne ' puts JSON.parse($_).values_at("file","line","type").join(":") ' |
+    sort        |
+    uniq -c     |
+    sort -n     |
+    tail -4
+```
+
 rbtrace
 ---
 
