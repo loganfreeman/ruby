@@ -83,28 +83,6 @@ gem install heapy
 bundle exec heapy read /tmp/ruby-heap.dump
 ```
 
-we need generate some objects and dump them to disk
-```ruby
-require 'objspace'
-
-ObjectSpace.trace_object_allocations_start
-
-count = (ARGV.first || 5_000 ).to_i
-
-ARRAY = []
-count.times do |x|
-  a = "#{x}_foo"
-  ARRAY << a
-end
-
-file_name = "/tmp/#{Time.now.to_f}-heap.dump"
-
-file = File.open(file_name, 'w')
-ObjectSpace.dump_all(output: file)
-file.close
-
-puts "heapy read #{file_name}"
-```
 analyze the heap dump
 ---
 ```ruby
