@@ -74,9 +74,15 @@ bundle exec rbtrace -p PID -e 'GC.stat'
 
 From Dump to Data
 ---
+heapy
 ```shell
 gem install heapy
 ```
+
+```shell
+bundle exec heapy read /tmp/ruby-heap.dump
+```
+
 we need generate some objects and dump them to disk
 ```ruby
 require 'objspace'
