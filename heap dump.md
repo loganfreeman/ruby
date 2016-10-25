@@ -30,6 +30,33 @@ cat heap.json |
 
 rbtrace
 ---
+require rbtrace into a process
+```ruby
+% cat server.rb
+require 'rbtrace'
+
+class String
+  def multiply_vowels(num)
+    @test = 123
+    gsub(/[aeiou]/){ |m| m*num }
+  end
+end
+
+while true
+  proc {
+    Dir.chdir("/tmp") do
+      Dir.pwd
+      Process.pid
+      'hello'.multiply_vowels(3)
+      sleep rand*0.5
+    end
+  }.call
+end
+```
+force SideKiq to dump a its heap with:
+```shell
+bundle exec rbtrace -p $SIDEKIQ_PID -e 'Thread.new{GC.start;require "objspace";io=File.open("/tmp/ruby-heap.dump", "w"); ObjectSpace.dump_all(output: io); io.close}'
+```
 
 ```shell
 rbtrace -p PID -e 'Thread.new{require "objspace"; ObjectSpace.trace_object_allocations_start; GC.start(); ObjectSpace.dump_all(output: File.open("heap.json", "w"))}.join'  
