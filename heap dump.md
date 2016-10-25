@@ -3,6 +3,9 @@ Links
 - [What I Learned About Hunting Memory Leaks in Ruby 2.1](http://blog.skylight.io/hunting-for-leaks-in-ruby/)
 - [What’s Inside a Heap Dump?](https://blog.codeship.com/the-definitive-guide-to-ruby-heap-dumps-part-i/)
 
+rbtrace
+---
+
 ```shell
 rbtrace -p PID -e 'Thread.new{require "objspace"; ObjectSpace.trace_object_allocations_start; GC.start(); ObjectSpace.dump_all(output: File.open("heap.json", "w"))}.join'  
 ```
