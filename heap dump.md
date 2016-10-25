@@ -55,6 +55,7 @@ end
 ```
 force SideKiq to dump a its heap with:
 ```shell
+bundle exec rbtrace -p PID -e "load 'path_to_file_with_more_commands.rb'"
 bundle exec rbtrace -p $SIDEKIQ_PID -e 'Thread.new{GC.start;require "objspace";io=File.open("/tmp/ruby-heap.dump", "w"); ObjectSpace.dump_all(output: io); io.close}'
 ```
 
