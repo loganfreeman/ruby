@@ -3,6 +3,7 @@ Links
 - [What I Learned About Hunting Memory Leaks in Ruby 2.1](http://blog.skylight.io/hunting-for-leaks-in-ruby/)
 - [What’s Inside a Heap Dump?](https://blog.codeship.com/the-definitive-guide-to-ruby-heap-dumps-part-i/)
 - [heapy](https://github.com/schneems/heapy)
+- [Ruby 2.1: objspace.so](http://tmm1.net/ruby21-objspace/)
 
 rbtrace
 ---
