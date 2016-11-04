@@ -27,3 +27,11 @@
         true # Run was successful
       end
     end
+
+    def consume
+      loop do
+        hook = @lock.synchronize { @hooks_left.pop }
+        break unless hook
+        run_hook(hook)
+      end
+    end
