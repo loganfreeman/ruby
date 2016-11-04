@@ -35,3 +35,40 @@
         run_hook(hook)
       end
     end
+
+    def wait_for_slot(hook)
+      @lock.synchronize do
+        slots_needed = processors_for_hook(hook)
+
+        loop do
+          if @slots_available >= slots_needed
+            @slots_available -= slots_needed
+
+            # Give another thread a chance since there are still slots available
+            @resource.signal if @slots_available > 0
+            break
+          elsif @slots_available > 0
+            # It's possible that another hook that requires fewer slots can be
+            # served, so give another a chance
+            @resource.signal
+
+            # Wait for a signal from another thread to try again
+            @resource.wait(@lock)
+          end
+        end
+      end
+    end
+
+    def release_slot(hook)
+      @lock.synchronize do
+        slots_released = processors_for_hook(hook)
+        @slots_available += slots_released
+
+        if @hooks_left.any?
+          # Signal once. `wait_for_slot` will perform additional signals if
+          # there are still slots available. This prevents us from sending out
+          # useless signals
+          @resource.signal
+        end
+      end
+    end
