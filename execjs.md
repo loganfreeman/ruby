@@ -12,3 +12,23 @@ context = ExecJS.compile(source)
 context.call("CoffeeScript.compile", "square = (x) -> x * x", bare: true)
 # => "var square;\nsquare = function(x) {\n  return x * x;\n};"
 ```
+
+console_polyfill
+---
+```ruby
+# Reimplement console methods for replaying on the client
+        def console_polyfill
+          <<-JS
+var console = { history: [] };
+['error', 'log', 'info', 'warn'].forEach(function (level) {
+  console[level] = function () {
+    var argArray = Array.prototype.slice.call(arguments);
+    if (argArray.length > 0) {
+      argArray[0] = '[SERVER] ' + argArray[0];
+    }
+    console.history.push({level: level, arguments: argArray});
+  };
+});
+          JS
+        end
+```
