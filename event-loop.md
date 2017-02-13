@@ -1,2 +1,3 @@
 - [eventmachine](https://github.com/eventmachine/eventmachine)
 - [cool.io](https://github.com/tarcieri/cool.io)
+- [timers](https://github.com/celluloid/timers)
