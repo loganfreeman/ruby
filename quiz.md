@@ -1,0 +1,2 @@
+- [9 Essential Ruby on Rails Interview Questions](https://www.toptal.com/ruby-on-rails/interview-questions)
+- [11 Ruby on Rails Interview Questions and Answers](https://www.codementor.io/blog/ruby-on-rails-interview-questions-du107w0ss)
