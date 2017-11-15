@@ -2,3 +2,5 @@
 - [11 Ruby on Rails Interview Questions and Answers](https://www.codementor.io/blog/ruby-on-rails-interview-questions-du107w0ss)
 - [What is an object?](https://gist.github.com/ryansobol/5252653)
 - [Ruby on Rails Interview questions](https://coderwall.com/p/yycytw/ruby-on-rails-interview-questions)
+- [Curated list of Ruby/Rails interview questions](https://github.com/dyjakan/ruby-rails-interview-questions)
+- [A list of questions about Ruby programming](https://github.com/nick-brown/ruby-interview-questions)
