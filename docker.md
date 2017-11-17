@@ -10,3 +10,4 @@
 - [Different approaches to create Docker containers for Ruby on Rails](https://github.com/neckhair/rails-on-docker)
 - [Supercharged Rails development using Docker containers](https://github.com/pacuna/dckerize)
 - [Building Microservices with Docker and the Rails API gem](https://blog.codeship.com/building-microservices-docker-rails-api-gem/)
+- [How to Set up a Microservices Architecture in Ruby](https://www.toptal.com/ruby/how-to-set-up-a-microservices-architecture)
