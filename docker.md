@@ -1,1 +1,2 @@
 - [homeland-docker](https://github.com/ruby-china/homeland-docker/blob/master/docker-compose.yml)
+- [Opinionated rails application templates](https://github.com/nickjj/orats)
