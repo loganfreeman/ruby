@@ -7,3 +7,4 @@
 - [Capistrano plugin to deploy your application inside docker containers with docker compose](https://github.com/emad-elsaid/capistrano-decompose)
 - [Dockerized Rails app using ActionCable, Elasticsearch, Sidekiq and Yarn](https://github.com/ledermann/docker-rails)
 - [An opinionated docker image for running Rails apps in production](https://github.com/ad2games/docker-rails)
+- [Different approaches to create Docker containers for Ruby on Rails](https://github.com/neckhair/rails-on-docker)
