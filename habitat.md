@@ -1,0 +1,1 @@
+- [Habitat Quick Setup](https://github.com/habitat-sh/core-plans/blob/master/scaffolding-ruby/doc/quickstart.md)
