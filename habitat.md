@@ -1,1 +1,2 @@
 - [Habitat Quick Setup](https://github.com/habitat-sh/core-plans/blob/master/scaffolding-ruby/doc/quickstart.md)
+- [A Ruby web application that generates animated gifs and easily deployed with Habitat](https://github.com/burtlo/habitatize)
