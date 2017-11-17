@@ -2,3 +2,4 @@
 - [Opinionated rails application templates](https://github.com/nickjj/orats)
 - [Dockerize a Rails 5, Postgres, Redis, Sidekiq and Action Cable Application with Docker Compose](https://nickjanetakis.com/blog/dockerize-a-rails-5-postgres-redis-sidekiq-action-cable-app-with-docker-compose)
 - [Dockernize your rails app easiest way](https://github.com/kikyous/docker-rails)
+- [Simple CLI to Generate and Run a Rails environment with Docker!](https://github.com/gmontard/dockrails)
