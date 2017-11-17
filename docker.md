@@ -9,3 +9,4 @@
 - [An opinionated docker image for running Rails apps in production](https://github.com/ad2games/docker-rails)
 - [Different approaches to create Docker containers for Ruby on Rails](https://github.com/neckhair/rails-on-docker)
 - [Supercharged Rails development using Docker containers](https://github.com/pacuna/dckerize)
+- [Building Microservices with Docker and the Rails API gem](https://blog.codeship.com/building-microservices-docker-rails-api-gem/)
